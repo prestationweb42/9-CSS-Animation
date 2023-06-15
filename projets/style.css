@@ -91,7 +91,7 @@ circle {
     /* indique la visibilité de la face */
     backface-visibility: hidden;
     position: absolute;
-    transition: transform 600ms linear;
+    transition: transform 500ms linear;
 }
 .devant img {
     width: 100%;
@@ -115,4 +115,54 @@ circle {
 }
 .carte:hover .derriere {
     transform: perspective(600px) rotateY(0deg);
+}
+/* Projet 4 Animation 4 points */
+.card-dots {
+    height: 10vh;
+}
+.conteneur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 142px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    filter: contrast(20);
+}
+.conteneur .dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    left: 15px;
+    filter: blur(4px);
+    background: #000;
+    border-radius: 50%;
+    animation: point 2800ms infinite;
+}
+.conteneur .dots span {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+    filter: blur(4px);
+    background: #000;
+    border-radius: 50%;
+}
+.conteneur .dots {
+    margin-top: 12px;
+    margin-left: 31px;
+    animation: points 2800ms infinite;
+}
+@keyframes point {
+    50% {
+        transform: translateX(100px);
+    }
+}
+@keyframes points {
+    50% {
+        transform: translateX(-35px);
+    }
 }
