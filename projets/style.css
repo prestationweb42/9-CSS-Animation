@@ -166,3 +166,116 @@ circle {
         transform: translateX(-35px);
     }
 }
+/* Projet 5 Overlay */
+/* Overlay type 1 */
+/* Attention : il faut que le fond derriere l'image soit blanc */
+.card-overlay {
+    height: 100vh;
+}
+.container-overlay {
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+.container-overlay img {
+    width: 100%;
+    height: auto;
+    transition: 500ms;
+}
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text-overlay .text {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    background-color: #4caf50;
+    padding: 15px 25px;
+    opacity: 0;
+    transition: 500ms;
+}
+.container-overlay:hover img {
+    opacity: 0.3;
+}
+.container-overlay:hover .text {
+    opacity: 1;
+}
+/* Overlay type 2 Zoom centre avec Texte*/
+.card-overlay-2 {
+    height: 100vh;
+}
+.container-overlay-2 {
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+.container-overlay-2 img {
+    width: 100%;
+    height: auto;
+}
+.text-overlay-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: 300ms;
+}
+.text-overlay-2 .text-2 {
+    font-size: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container-overlay-2:hover .text-overlay-2 {
+    transform: scale(1);
+}
+/* Overlay type 3 Slide */
+.card-overlay-3 {
+    height: 100vh;
+}
+.container-overlay-3 {
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+.container-overlay-3 img {
+    width: 100%;
+    height: auto;
+}
+.text-overlay-3 {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transition: 300ms;
+}
+.text-overlay-3 .text-3 {
+    font-size: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container-overlay-3:hover .text-overlay-3 {
+    height: 100%;
+}
+/* projet 7 Animation Btn before after */
