@@ -1,4 +1,4 @@
-/* Checkbox */
+/* Projet 1 Checkbox */
 /* Bien respecter la position du label dans le html */
 input[type="checkbox"] {
     margin: 20px auto;
@@ -35,4 +35,84 @@ input:checked + label {
 input:checked + label::after {
     transform: translate(50px, 0);
     background-color: rgb(29, 105, 52);
+}
+/* Projet 2 Animation SVG*/
+svg {
+    width: 200px;
+    height: 200px;
+    transform: translateX(-50px);
+    filter: drop-shadow(100px 0 #00ccff);
+}
+.animation-svg {
+    background: radial-gradient(circle at bottom, #9fb8d1 0%, #0c1753 100%);
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+circle {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 10px;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 70;
+    animation: rotation 2000ms ease-in-out alternate infinite;
+}
+@keyframes rotation {
+    from {
+        stroke-dasharray: 100 100;
+        stroke-dashoffset: 70;
+    }
+    to {
+        stroke-dasharray: 20 20;
+        stroke-dashoffset: -600;
+    }
+}
+/* Projet 3 Carte tournante */
+.body-carte {
+    background: radial-gradient(circle at bottom, #cfd19f 0%, #530c48 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.carte {
+    cursor: pointer;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.devant,
+.derriere {
+    width: 100%;
+    height: 100%;
+    /* indique la visibilité de la face */
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 600ms linear;
+}
+.devant img {
+    width: 100%;
+    height: 100%;
+}
+.devant {
+    transform: perspective(600px) rotateY(0deg);
+}
+.derriere {
+    background-color: #fff;
+    transform: perspective(600px) rotateY(180deg);
+}
+.contenu {
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+    margin-top: 250px;
+}
+.carte:hover .devant {
+    transform: perspective(600px) rotateY(-180deg);
+}
+.carte:hover .derriere {
+    transform: perspective(600px) rotateY(0deg);
 }
