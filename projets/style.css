@@ -1,0 +1,38 @@
+/* Checkbox */
+/* Bien respecter la position du label dans le html */
+input[type="checkbox"] {
+    margin: 20px auto;
+    display: none; /* on cache l'input */
+}
+/* on stylise le label pour le fond */
+label {
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(202, 223, 226);
+    border-radius: 25px;
+    transition: all ease-out 400ms;
+}
+/* on creer le rond */
+label::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(141, 172, 175);
+    transition: all ease-out 400ms;
+}
+/* on creer l'animation */
+input:checked + label {
+    background-color: rgb(150, 239, 184);
+}
+input:checked + label::after {
+    transform: translate(50px, 0);
+    background-color: rgb(29, 105, 52);
+}
